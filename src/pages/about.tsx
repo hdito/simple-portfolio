@@ -3,6 +3,7 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 import { cairo } from "@/fonts/cairo";
 import { inter } from "@/fonts/inter";
+import Image from "next/image";
 
 interface AboutProps {
   content: string;
@@ -18,14 +19,26 @@ export default function About({ content }: AboutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={AboutStyles.about}>
-        <div></div>
+        <Image
+          className={`${AboutStyles.about__arrows} ${AboutStyles["about__arrows--top"]}`}
+          src="/arrows.svg"
+          width={160}
+          height={100}
+          alt=""
+        />
         <main className={AboutStyles["about__text-block"]}>
           <h1 className={`${cairo.className} ${AboutStyles.about__header}`}>
             About me
           </h1>
           <p className={inter.className}>{content}</p>
         </main>
-        <div></div>
+        <Image
+          className={`${AboutStyles.about__arrows} ${AboutStyles["about__arrows--bottom"]}`}
+          src="/arrows.svg"
+          width={160}
+          height={100}
+          alt=""
+        />
       </div>
     </>
   );
