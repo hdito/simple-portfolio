@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 import menuStyles from "@/styles/Menu.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { Signature } from "./Signature";
 
 export const Menu = ({ children }: PropsWithChildren): JSX.Element => {
   const links: { alt: string; src: string; href: string }[] = [
@@ -13,6 +14,7 @@ export const Menu = ({ children }: PropsWithChildren): JSX.Element => {
   ];
   return (
     <div className={menuStyles.menu__container}>
+      <Signature />
       <div className={menuStyles.menu__content}>{children}</div>
       <div className={menuStyles.menu}>
         {links.map((link) => (
