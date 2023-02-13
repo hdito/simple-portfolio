@@ -1,0 +1,50 @@
+.qualification {
+  padding: 16px 40px;
+
+  &__header {
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  &__subheader {
+    border-bottom: 3px solid black;
+    width: 280px;
+    font-weight: 800;
+    font-size: 22px;
+  }
+
+  &__section {
+    font-size: 20px;
+  }
+
+  &__skills-list {
+    padding-left: 16px;
+    list-style: square inside;
+  }
+
+  &__sections-container {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1280px) {
+  .qualification {
+    padding: 50px 140px;
+
+    &__header {
+      font-size: 100px;
+    }
+
+    &__subheader {
+      width: 444px;
+      font-size: 25px;
+    }
+
+    &__section {
+      font-size: 23px;
+    }
+  }
+}
